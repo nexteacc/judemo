@@ -30,7 +30,7 @@ const DownloadBanner: React.FC = () => {
                 {/* Text Content */}
                 <div className="mb-10 lg:mb-0 z-10 text-center lg:text-left max-w-2xl">
                     <h3 className="text-2xl md:text-4xl font-extrabold text-brand-black mb-4 leading-tight">
-                        下载聚藏Art，<br/>
+                        下载泽麟，<br/>
                         开启您的数字资产之旅
                     </h3>
                     <p className="text-brand-black/80 text-base md:text-lg font-bold max-w-lg mx-auto lg:mx-0">

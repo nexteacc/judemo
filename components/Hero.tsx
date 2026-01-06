@@ -129,7 +129,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-xs sm:text-sm md:text-base font-bold font-mono text-gray-600 tracking-[0.3em] uppercase mb-16"
         >
-          JucangArt · The Digital Asset Ecosystem
+          Zelin · The Digital Asset Ecosystem
         </motion.p>
 
         {/* Button */}
@@ -142,7 +142,7 @@ const Hero: React.FC = () => {
             className="group relative px-10 py-4 rounded-full border border-brand-black hover:border-brand-yellow transition-colors duration-300 overflow-hidden bg-white/50 backdrop-blur-sm"
         >
           <span className="relative z-10 text-sm md:text-base tracking-[0.2em] font-extrabold text-brand-black group-hover:text-black transition-colors pl-1">
-            进入聚藏ART
+            进入泽麟
           </span>
           <div className="absolute inset-0 bg-brand-yellow transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 -z-0"></div>
         </motion.button>

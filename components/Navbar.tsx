@@ -9,10 +9,10 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const navLinks = [
-    { name: '[关于聚藏]', href: '#' },
-    { name: '[下载聚藏]', href: '#' },
+    { name: '[关于泽麟]', href: '#' },
+    { name: '[下载泽麟]', href: '#' },
     { name: '[问题与帮助]', href: '#' },
-    { name: '[加入聚藏]', href: '#' },
+    { name: '[加入泽麟]', href: '#' },
   ];
 
   return (
@@ -23,15 +23,11 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-brand-black rounded flex items-center justify-center shadow-md">
-             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 4h4v12a4 4 0 0 1-4 4" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M14 8h6" stroke="white" strokeWidth="3" strokeLinecap="round"/>
-                <circle cx="17" cy="16" r="2" fill="white"/>
-             </svg>
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 sm:w-12 sm:h-12 overflow-hidden flex items-center justify-center">
+             <img src="/1024x1024logo.png" alt="泽麟 Logo" className="w-full h-full object-contain" />
           </div>
-          <span className="text-xl font-extrabold tracking-tighter hidden sm:block text-brand-black">JUCANG</span>
+          <span className="text-xl font-serif font-bold tracking-tight hidden sm:block text-brand-black">ZELIN</span>
         </div>
 
         {/* Desktop Menu */}

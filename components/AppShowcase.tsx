@@ -14,7 +14,7 @@ const MarketplacePhone = () => (
       {/* Header */}
       <div className="p-6 pt-12 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent absolute w-full z-10">
         <div className="flex items-center gap-2">
-          <span className="font-bold tracking-tight">J.聚藏</span>
+          <span className="font-bold tracking-tight">泽麟</span>
         </div>
         <div className="flex gap-4">
           <Search size={20} strokeWidth={2} />
@@ -82,14 +82,16 @@ const CommunityPhone = () => (
       {/* Feed Item */}
       <div className="p-5 bg-white mt-2 pb-6 border-b border-gray-100">
         <div className="flex gap-3 mb-3">
-          <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white font-bold text-sm">J.</div>
+          <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden border border-gray-100 shadow-sm">
+             <img src="/1024x1024logo.png" alt="Logo" className="w-full h-full object-cover" />
+          </div>
           <div>
             <h4 className="text-sm font-bold flex items-center gap-1.5 text-black">官方小助手 <span className="bg-blue-50 text-blue-600 border border-blue-100 text-[9px] px-1.5 py-0.5 rounded font-medium">官方</span></h4>
             <p className="text-[10px] text-gray-400 mt-0.5">1分钟前 · 北京</p>
           </div>
         </div>
         <p className="text-sm text-gray-700 mb-4 leading-relaxed tracking-wide">
-          欢迎加入聚藏Art！签到互动赚积分换好礼，攒经验值升级解锁优先购等特权，创新RWA让数字收藏绑定现实权益...
+          欢迎加入泽麟！签到互动赚积分换好礼，攒经验值升级解锁优先购等特权，创新RWA让数字收藏绑定现实权益...
         </p>
 
         {/* Vote Widget */}
@@ -232,7 +234,7 @@ const AppShowcase: React.FC = () => {
                   </div>
                   <span className="text-xs text-black font-bold tracking-wide">学习指南</span>
               </div>
-              <p className="text-xs text-gray-500 leading-relaxed">官方教程汇聚，助你快速了解聚藏生态玩法。</p>
+              <p className="text-xs text-gray-500 leading-relaxed">官方教程汇聚，助你快速了解泽麟生态玩法。</p>
            </motion.div>
         </motion.div>
 

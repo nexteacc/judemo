@@ -136,7 +136,7 @@ const Features: React.FC = () => {
         >
             <div className="relative z-10 max-w-md">
                 <h3 className="text-3xl md:text-4xl font-medium mb-6 text-brand-black leading-tight">能量聚集<br/>价值生长</h3>
-                <p className="text-gray-700 leading-relaxed text-lg">聚藏Art 让你的每一次互动与任务，都能汇聚为真实的价值回报。</p>
+                <p className="text-gray-700 leading-relaxed text-lg">泽麟让你的每一次互动与任务，都能汇聚为真实的价值回报。</p>
             </div>
             {/* Decorative Icon */}
             <motion.div 

@@ -13,13 +13,13 @@ const Footer: React.FC = () => {
           {/* Brand Column - Spans full width on mobile (col-span-2), 5 cols on desktop */}
           <div className="col-span-2 md:col-span-5">
              <div className="flex items-center gap-3 mb-4 md:mb-6">
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-black rounded-lg flex items-center justify-center shadow-md">
-                    <span className="text-white font-bold text-lg md:text-xl">J.</span>
+                <div className="w-8 h-8 md:w-12 md:h-12 overflow-hidden flex items-center justify-center">
+                    <img src="/1024x1024logo.png" alt="泽麟 Logo" className="w-full h-full object-contain" />
                 </div>
-                <span className="text-xl md:text-2xl font-bold tracking-tighter text-black">JUCANG</span>
+                <span className="text-xl md:text-2xl font-serif font-bold tracking-tight text-black">ZELIN</span>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed max-w-sm">
-              聚藏 Art 是由 JuCoin 生态构建的合规数字资产平台。我们致力于通过技术创新，将文化艺术与数字经济深度融合，为用户提供安全、透明、有价值的收藏体验。
+              泽麟是由 JuCoin 生态构建的合规数字资产平台。我们致力于通过技术创新，将文化艺术与数字经济深度融合，为用户提供安全、透明、有价值的收藏体验。
             </p>
           </div>
 
@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
         {/* Bottom Bar - Centered on Mobile, Row on Desktop */}
         <div className="border-t border-gray-200 pt-8 flex flex-col-reverse md:flex-row justify-between items-center gap-6 md:gap-8">
             <p className="text-xs text-gray-400 text-center md:text-left">
-                © 2024 Jucang Art. All rights reserved.
+                © 2024 Zelin. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8 text-xs text-gray-500 font-medium">
                 <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>
