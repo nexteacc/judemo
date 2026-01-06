@@ -56,18 +56,22 @@ const DownloadBanner: React.FC = () => {
                         <motion.button 
                              whileHover={{ scale: 1.05, backgroundColor: "#f9fafb" }}
                              whileTap={{ scale: 0.95 }}
-                             className="flex items-center justify-center gap-3 bg-white text-black px-6 py-3 rounded-xl border border-white/20 shadow-lg w-full sm:w-40"
+                             className="flex items-center justify-center bg-white text-black py-3 rounded-xl border border-white/20 shadow-lg w-full sm:w-40 px-4"
                         >
-                            <Smartphone size={18} />
-                            <span className="text-xs font-bold">iOS 下载</span>
+                            <div className="flex items-center gap-3 w-28">
+                                <Smartphone size={18} className="flex-shrink-0" />
+                                <span className="text-xs font-bold">iOS 下载</span>
+                            </div>
                         </motion.button>
                         <motion.button 
                              whileHover={{ scale: 1.05, backgroundColor: "#f9fafb" }}
                              whileTap={{ scale: 0.95 }}
-                             className="flex items-center justify-center gap-3 bg-white text-black px-6 py-3 rounded-xl border border-white/20 shadow-lg w-full sm:w-40"
+                             className="flex items-center justify-center bg-white text-black py-3 rounded-xl border border-white/20 shadow-lg w-full sm:w-40 px-4"
                         >
-                            <Smartphone size={18} />
-                            <span className="text-xs font-bold">Android 下载</span>
+                            <div className="flex items-center gap-3 w-28">
+                                <Smartphone size={18} className="flex-shrink-0" />
+                                <span className="text-xs font-bold">Android 下载</span>
+                            </div>
                         </motion.button>
                     </div>
                 </div>
