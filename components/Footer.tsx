@@ -64,12 +64,12 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-200 pt-8 flex flex-col-reverse md:flex-row justify-between items-start md:items-center gap-4 md:gap-8">
-            <p className="text-xs text-gray-400">
+        {/* Bottom Bar - Centered on Mobile, Row on Desktop */}
+        <div className="border-t border-gray-200 pt-8 flex flex-col-reverse md:flex-row justify-between items-center gap-6 md:gap-8">
+            <p className="text-xs text-gray-400 text-center md:text-left">
                 © 2024 Jucang Art. All rights reserved.
             </p>
-            <div className="flex flex-wrap gap-4 md:gap-8 text-xs text-gray-500 font-medium">
+            <div className="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8 text-xs text-gray-500 font-medium">
                 <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>
                 <a href="#" className="hover:text-black transition-colors">Terms of Service</a>
                 <a href="#" className="hover:text-black transition-colors">Cookie Policy</a>

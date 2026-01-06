@@ -58,7 +58,7 @@ const DownloadBanner: React.FC = () => {
                              whileTap={{ scale: 0.95 }}
                              className="flex items-center justify-center bg-white text-brand-black py-3 rounded-xl border border-white/20 shadow-lg w-full sm:w-40 px-4"
                         >
-                            <div className="flex items-center gap-3 w-28">
+                            <div className="flex items-center gap-3 w-32">
                                 <Smartphone size={18} className="flex-shrink-0" />
                                 <span className="text-xs font-bold">iOS 下载</span>
                             </div>
@@ -68,7 +68,7 @@ const DownloadBanner: React.FC = () => {
                              whileTap={{ scale: 0.95 }}
                              className="flex items-center justify-center bg-white text-brand-black py-3 rounded-xl border border-white/20 shadow-lg w-full sm:w-40 px-4"
                         >
-                            <div className="flex items-center gap-3 w-28">
+                            <div className="flex items-center gap-3 w-32">
                                 <Smartphone size={18} className="flex-shrink-0" />
                                 <span className="text-xs font-bold">Android 下载</span>
                             </div>

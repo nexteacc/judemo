@@ -10,12 +10,12 @@ interface FAQItemProps {
 
 const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onClick }) => {
   return (
-    <div className="border-b border-gray-200 py-8 group first:border-t">
+    <div className="border-b border-gray-200 py-6 md:py-8 group first:border-t">
       <button
-        className="w-full flex justify-between items-center text-left focus:outline-none"
+        className="w-full flex justify-between items-center text-left focus:outline-none px-2 md:px-4"
         onClick={onClick}
       >
-        <span className={`text-lg md:text-xl font-medium tracking-wide transition-colors duration-300 pr-8 ${isOpen ? 'text-brand-black' : 'text-gray-800 group-hover:text-brand-black'}`}>
+        <span className={`text-base md:text-xl font-medium tracking-wide transition-colors duration-300 pr-4 md:pr-8 ${isOpen ? 'text-brand-black' : 'text-gray-800 group-hover:text-brand-black'}`}>
           {question}
         </span>
         <div className={`flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full border transition-all duration-300 ${isOpen ? 'bg-brand-yellow border-brand-yellow text-black rotate-180' : 'bg-transparent border-gray-300 text-gray-500 group-hover:border-black group-hover:text-black'}`}>
@@ -23,11 +23,11 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onClick }) 
         </div>
       </button>
       <div
-        className={`overflow-hidden transition-all duration-500 ease-in-out ${
-          isOpen ? 'max-h-96 opacity-100 mt-6' : 'max-h-0 opacity-0'
+        className={`overflow-hidden transition-all duration-500 ease-in-out px-2 md:px-4 ${
+          isOpen ? 'max-h-96 opacity-100 mt-4 md:mt-6' : 'max-h-0 opacity-0'
         }`}
       >
-        <p className="text-gray-700 leading-relaxed font-normal text-base md:text-lg max-w-3xl">
+        <p className="text-gray-700 leading-relaxed font-normal text-sm md:text-lg max-w-3xl">
           {answer}
         </p>
       </div>
@@ -55,7 +55,7 @@ const FAQ: React.FC = () => {
 
   return (
     <div>
-      <h2 className="text-3xl md:text-5xl font-medium text-center mb-20 tracking-wider text-brand-black">常见问题解答</h2>
+      <h2 className="text-3xl md:text-5xl font-medium text-center mb-12 md:mb-20 tracking-wider text-brand-black px-4">常见问题解答</h2>
       <div className="w-full max-w-4xl mx-auto">
         {faqs.map((faq, index) => (
           <FAQItem
