@@ -15,10 +15,10 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onClick }) 
         className="w-full flex justify-between items-center text-left focus:outline-none"
         onClick={onClick}
       >
-        <span className={`text-lg md:text-xl font-normal tracking-wide transition-colors duration-300 pr-8 ${isOpen ? 'text-black' : 'text-gray-600 group-hover:text-black'}`}>
+        <span className={`text-lg md:text-xl font-medium tracking-wide transition-colors duration-300 pr-8 ${isOpen ? 'text-brand-black' : 'text-gray-800 group-hover:text-brand-black'}`}>
           {question}
         </span>
-        <div className={`flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full border transition-all duration-300 ${isOpen ? 'bg-brand-yellow border-brand-yellow text-black rotate-180' : 'bg-transparent border-gray-300 text-gray-400 group-hover:border-black group-hover:text-black'}`}>
+        <div className={`flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full border transition-all duration-300 ${isOpen ? 'bg-brand-yellow border-brand-yellow text-black rotate-180' : 'bg-transparent border-gray-300 text-gray-500 group-hover:border-black group-hover:text-black'}`}>
            {isOpen ? <Minus size={16} /> : <Plus size={16} />}
         </div>
       </button>
@@ -27,7 +27,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onClick }) 
           isOpen ? 'max-h-96 opacity-100 mt-6' : 'max-h-0 opacity-0'
         }`}
       >
-        <p className="text-gray-500 leading-relaxed font-light text-base md:text-lg max-w-3xl">
+        <p className="text-gray-700 leading-relaxed font-normal text-base md:text-lg max-w-3xl">
           {answer}
         </p>
       </div>
@@ -55,7 +55,7 @@ const FAQ: React.FC = () => {
 
   return (
     <div>
-      <h2 className="text-3xl md:text-5xl font-light text-center mb-20 tracking-wider text-black">常见问题解答</h2>
+      <h2 className="text-3xl md:text-5xl font-medium text-center mb-20 tracking-wider text-brand-black">常见问题解答</h2>
       <div className="w-full max-w-4xl mx-auto">
         {faqs.map((faq, index) => (
           <FAQItem

@@ -108,7 +108,7 @@ const Hero: React.FC = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-                className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-medium tracking-[0.15em] sm:tracking-[0.25em] text-black leading-tight whitespace-nowrap"
+                className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[0.15em] sm:tracking-[0.25em] text-brand-black leading-tight whitespace-nowrap"
             >
             因共识而聚 · 为价值而藏
             </motion.h1>
@@ -127,7 +127,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-xs sm:text-sm md:text-base font-mono text-gray-400 tracking-[0.3em] uppercase mb-16"
+            className="text-xs sm:text-sm md:text-base font-bold font-mono text-gray-600 tracking-[0.3em] uppercase mb-16"
         >
           JucangArt · The Digital Asset Ecosystem
         </motion.p>
@@ -139,9 +139,9 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.9 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group relative px-10 py-4 rounded-full border border-black hover:border-brand-yellow transition-colors duration-300 overflow-hidden bg-white/50 backdrop-blur-sm"
+            className="group relative px-10 py-4 rounded-full border border-brand-black hover:border-brand-yellow transition-colors duration-300 overflow-hidden bg-white/50 backdrop-blur-sm"
         >
-          <span className="relative z-10 text-sm md:text-base tracking-[0.2em] font-bold text-black group-hover:text-black transition-colors pl-1">
+          <span className="relative z-10 text-sm md:text-base tracking-[0.2em] font-extrabold text-brand-black group-hover:text-black transition-colors pl-1">
             进入聚藏ART
           </span>
           <div className="absolute inset-0 bg-brand-yellow transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 -z-0"></div>

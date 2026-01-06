@@ -18,20 +18,20 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/80 backdrop-blur-md py-4 border-b border-gray-100 shadow-sm' : 'bg-transparent py-6'
+        scrolled ? 'bg-white/90 backdrop-blur-md py-4 border-b border-gray-100 shadow-sm' : 'bg-transparent py-6'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-black rounded flex items-center justify-center">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-brand-black rounded flex items-center justify-center shadow-md">
              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 4h4v12a4 4 0 0 1-4 4" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M14 8h6" stroke="white" strokeWidth="3" strokeLinecap="round"/>
                 <circle cx="17" cy="16" r="2" fill="white"/>
              </svg>
           </div>
-          <span className="text-xl font-bold tracking-tighter hidden sm:block text-black">JUCANG</span>
+          <span className="text-xl font-extrabold tracking-tighter hidden sm:block text-brand-black">JUCANG</span>
         </div>
 
         {/* Desktop Menu */}
@@ -40,7 +40,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
             <a
               key={link.name}
               href={link.href}
-              className="text-gray-500 hover:text-black hover:bg-brand-yellow/20 px-2 rounded-md text-sm tracking-widest transition-all duration-200"
+              className="text-gray-900 hover:text-brand-black font-semibold hover:bg-brand-yellow/20 px-2 rounded-md text-sm tracking-widest transition-all duration-200"
             >
               {link.name}
             </a>
@@ -49,8 +49,8 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-black">
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          <button onClick={() => setIsOpen(!isOpen)} className="text-brand-black">
+            {isOpen ? <X size={24} strokeWidth={2.5} /> : <Menu size={24} strokeWidth={2.5} />}
           </button>
         </div>
       </div>
@@ -63,7 +63,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-600 hover:text-black hover:bg-yellow-50 text-center py-2 rounded"
+                className="text-gray-900 font-semibold hover:text-brand-black hover:bg-yellow-50 text-center py-2 rounded"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}

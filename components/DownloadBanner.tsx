@@ -29,11 +29,11 @@ const DownloadBanner: React.FC = () => {
                 
                 {/* Text Content */}
                 <div className="mb-10 lg:mb-0 z-10 text-center lg:text-left max-w-2xl">
-                    <h3 className="text-2xl md:text-4xl font-bold text-black mb-4 leading-tight">
+                    <h3 className="text-2xl md:text-4xl font-extrabold text-brand-black mb-4 leading-tight">
                         下载聚藏Art，<br/>
                         开启您的数字资产之旅
                     </h3>
-                    <p className="text-black/70 text-base md:text-lg font-medium max-w-lg mx-auto lg:mx-0">
+                    <p className="text-brand-black/80 text-base md:text-lg font-bold max-w-lg mx-auto lg:mx-0">
                         融合文化、价值与创意的数字世界，让每一次收藏都更有意义。
                     </p>
                 </div>
@@ -43,7 +43,7 @@ const DownloadBanner: React.FC = () => {
                     <motion.button 
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="flex-1 sm:flex-none flex items-center justify-center gap-3 bg-black hover:bg-gray-900 text-white px-8 py-4 rounded-xl border border-black transition-colors shadow-xl"
+                        className="flex-1 sm:flex-none flex items-center justify-center gap-3 bg-brand-black hover:bg-gray-900 text-white px-8 py-4 rounded-xl border border-brand-black transition-colors shadow-xl"
                     >
                         <QrCode size={20} className="text-brand-yellow" />
                         <div className="flex flex-col items-start">
@@ -56,7 +56,7 @@ const DownloadBanner: React.FC = () => {
                         <motion.button 
                              whileHover={{ scale: 1.05, backgroundColor: "#f9fafb" }}
                              whileTap={{ scale: 0.95 }}
-                             className="flex items-center justify-center bg-white text-black py-3 rounded-xl border border-white/20 shadow-lg w-full sm:w-40 px-4"
+                             className="flex items-center justify-center bg-white text-brand-black py-3 rounded-xl border border-white/20 shadow-lg w-full sm:w-40 px-4"
                         >
                             <div className="flex items-center gap-3 w-28">
                                 <Smartphone size={18} className="flex-shrink-0" />
@@ -66,7 +66,7 @@ const DownloadBanner: React.FC = () => {
                         <motion.button 
                              whileHover={{ scale: 1.05, backgroundColor: "#f9fafb" }}
                              whileTap={{ scale: 0.95 }}
-                             className="flex items-center justify-center bg-white text-black py-3 rounded-xl border border-white/20 shadow-lg w-full sm:w-40 px-4"
+                             className="flex items-center justify-center bg-white text-brand-black py-3 rounded-xl border border-white/20 shadow-lg w-full sm:w-40 px-4"
                         >
                             <div className="flex items-center gap-3 w-28">
                                 <Smartphone size={18} className="flex-shrink-0" />
