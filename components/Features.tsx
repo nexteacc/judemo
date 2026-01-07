@@ -43,14 +43,14 @@ const Features: React.FC = () => {
         viewport={{ once: true, margin: "-50px" }}
         className="grid grid-cols-1 md:grid-cols-2 gap-8"
       >
-        {/* Card 1 */}
+        {/* Card 1 - JuPay */}
         <motion.div
           variants={itemVariants}
           whileHover={{ y: -5, boxShadow: "0 20px 40px -5px rgba(0, 0, 0, 0.1)" }}
           className="glass-card rounded-3xl p-10 border border-black/5 hover:border-brand-black transition-colors duration-500 group cursor-pointer relative overflow-hidden bg-white/80 flex flex-col justify-between h-full min-h-[320px]"
         >
-          {/* Hover Glow Effect */}
-          <div className="absolute -top-24 -right-24 w-72 h-72 bg-brand-yellow/30 blur-[80px] rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          {/* Hover Glow Effect - Radial Gradient */}
+          <div className="absolute -top-12 -right-12 w-48 h-48 bg-yellow-300 blur-[80px] rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
           <div>
             <div className="flex justify-between items-start mb-10">
@@ -82,14 +82,14 @@ const Features: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Card 2 */}
+        {/* Card 2 - Huifu */}
         <motion.div
           variants={itemVariants}
           whileHover={{ y: -5, boxShadow: "0 20px 40px -5px rgba(0, 0, 0, 0.1)" }}
           className="glass-card rounded-3xl p-10 border border-black/5 hover:border-brand-black transition-colors duration-500 group cursor-pointer relative overflow-hidden bg-white/80 flex flex-col justify-between h-full min-h-[320px]"
         >
-          {/* Hover Glow Effect */}
-          <div className="absolute -top-24 -right-24 w-72 h-72 bg-brand-yellow/30 blur-[80px] rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          {/* Hover Glow Effect - Radial Gradient */}
+          <div className="absolute -top-12 -right-12 w-48 h-48 bg-yellow-300 blur-[80px] rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
           <div>
             <div className="flex justify-between items-start mb-10">
@@ -125,7 +125,7 @@ const Features: React.FC = () => {
         </motion.div>
       </motion.div>
 
-      {/* Bento Grid Features - Align heights strictly */}
+      {/* Bento Grid Features */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -134,14 +134,14 @@ const Features: React.FC = () => {
         className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16"
       >
 
-        {/* Large Card Left - Full Height */}
+        {/* Large Card Left - Energy */}
         <motion.div
           variants={itemVariants}
           whileHover={{ y: -5, boxShadow: "0 20px 40px -5px rgba(0, 0, 0, 0.1)" }}
           className="glass-card rounded-3xl p-10 flex flex-col justify-between h-full min-h-[380px] relative overflow-hidden group hover:border-brand-black/20 transition-colors duration-500 bg-white/80 shadow-sm"
         >
-          {/* Hover Glow Effect */}
-          <div className="absolute -top-24 -right-24 w-72 h-72 bg-brand-yellow/30 blur-[80px] rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          {/* Hover Glow Effect - Radial Gradient */}
+          <div className="absolute -top-12 -right-12 w-48 h-48 bg-yellow-300 blur-[80px] rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
           <div className="relative z-10 max-w-md">
             <h3 className="text-3xl md:text-4xl font-medium mb-6 text-brand-black leading-tight">能量聚集<br />价值生长</h3>
@@ -151,7 +151,7 @@ const Features: React.FC = () => {
           <motion.div
             animate={{ rotate: [0, 5, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -right-8 -bottom-8 opacity-10 group-hover:opacity-20 transition-opacity duration-500 text-brand-yellow transform group-hover:scale-105"
+            className="absolute -right-8 -bottom-8 opacity-100 transition-opacity duration-500 text-brand-yellow transform group-hover:scale-105"
           >
             <Coins size={240} strokeWidth={0.5} className="text-brand-yellow" />
           </motion.div>
@@ -160,16 +160,16 @@ const Features: React.FC = () => {
         {/* Right Column Stack */}
         <div className="flex flex-col gap-8 h-full">
 
-          {/* Top Right */}
+          {/* Top Right - Culture */}
           <motion.div
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
             className="glass-card rounded-3xl p-8 flex items-center justify-between group hover:shadow-lg transition-all duration-300 bg-white/80 h-full border border-black/5 relative overflow-hidden"
           >
-            {/* Hover Glow Effect */}
-            <div className="absolute -top-20 -right-20 w-48 h-48 bg-brand-yellow/20 blur-[60px] rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            {/* Hover Glow Effect - Radial Gradient */}
+            <div className="absolute -top-12 -right-12 w-48 h-48 bg-yellow-300 blur-[80px] rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-            <div>
+            <div className="relative z-10">
               <h3 className="text-xl md:text-2xl font-medium mb-3 text-brand-black">文化共创 多元融合</h3>
               <p className="text-gray-700 text-sm leading-relaxed">携手艺术家与品牌，<br />共建数字文化新生态。</p>
             </div>
@@ -178,16 +178,16 @@ const Features: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Bottom Right */}
+          {/* Bottom Right - Security */}
           <motion.div
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
             className="glass-card rounded-3xl p-8 flex items-center justify-between group hover:shadow-lg transition-all duration-300 bg-white/80 h-full border border-black/5 relative overflow-hidden"
           >
-            {/* Hover Glow Effect */}
-            <div className="absolute -top-20 -right-20 w-48 h-48 bg-brand-yellow/20 blur-[60px] rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            {/* Hover Glow Effect - Radial Gradient */}
+            <div className="absolute -top-12 -right-12 w-48 h-48 bg-yellow-300 blur-[80px] rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-            <div>
+            <div className="relative z-10">
               <h3 className="text-xl md:text-2xl font-medium mb-3 text-brand-black">安全交易 合规保障</h3>
               <p className="text-gray-700 text-sm leading-relaxed">依托 JuPay 与汇付天下，<br />打造可信的交易环境。</p>
             </div>
