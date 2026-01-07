@@ -110,7 +110,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[0.15em] sm:tracking-[0.25em] text-brand-black leading-tight whitespace-nowrap"
           >
-            因共识而聚 · 为价值而藏
+            泽聚万象 · 麟启新生
           </motion.h1>
         </div>
 
