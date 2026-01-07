@@ -17,17 +17,16 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 backdrop-blur-md py-4 border-b border-gray-100 shadow-sm' : 'bg-transparent py-6'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-black/90 backdrop-blur-md py-4 border-b border-white/10 shadow-sm' : 'bg-transparent py-6'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 sm:w-12 sm:h-12 overflow-hidden flex items-center justify-center">
-             <img src="/1024x1024logo.png" alt="泽麟 Logo" className="w-full h-full object-contain" />
+            <img src="/1024x1024logo.png" alt="泽麟 Logo" className="w-full h-full object-contain" />
           </div>
-          <span className="text-xl font-serif font-bold tracking-tight hidden sm:block text-brand-black">ZELIN</span>
+          <span className="text-xl font-serif font-bold tracking-tight hidden sm:block text-white">ZELIN</span>
         </div>
 
         {/* Desktop Menu */}
@@ -36,7 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
             <a
               key={link.name}
               href={link.href}
-              className="text-gray-900 hover:text-brand-black font-semibold hover:bg-brand-yellow/20 px-2 rounded-md text-sm tracking-widest transition-all duration-200"
+              className="text-gray-300 hover:text-white font-semibold hover:bg-brand-yellow/20 px-2 rounded-md text-sm tracking-widest transition-all duration-200"
             >
               {link.name}
             </a>
@@ -45,7 +44,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-brand-black">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-white">
             {isOpen ? <X size={24} strokeWidth={2.5} /> : <Menu size={24} strokeWidth={2.5} />}
           </button>
         </div>
@@ -53,13 +52,13 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 p-4 shadow-xl">
+        <div className="md:hidden absolute top-full left-0 w-full bg-black border-b border-white/10 p-4 shadow-xl">
           <div className="flex flex-col space-y-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-900 font-semibold hover:text-brand-black hover:bg-yellow-50 text-center py-2 rounded"
+                className="text-gray-300 font-semibold hover:text-white hover:bg-white/10 text-center py-2 rounded"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
