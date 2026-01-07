@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
             rotateY: rotateY,
             transformStyle: "preserve-3d" // Essential for 3D feel
           }}
-          className="w-64 h-64 sm:w-80 sm:h-80 md:w-[480px] md:h-[480px]"
+          className="w-full max-w-[500px] aspect-square flex items-center justify-center"
         >
           {/* Image - Handles Infinite Floating/Breathing Animation */}
           <motion.img
@@ -86,16 +86,12 @@ const Hero: React.FC = () => {
               duration: 8,
               ease: "easeInOut"
             }}
-            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
-            alt="Abstract Liquid"
-            className="w-full h-full object-cover rounded-full filter grayscale sepia brightness-110 saturate-[3.5] hue-rotate-[-5deg] contrast-125 drop-shadow-2xl"
-            style={{
-              maskImage: 'radial-gradient(circle at center, black 40%, transparent 70%)',
-              WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 70%)',
-            }}
+            src="/Gemini_Generated_Image_wwh29gwwh29gwwh2 (1).png"
+            alt="Golden Qilin"
+            className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(234,179,8,0.3)]"
           />
           {/* Glow Effect attached to the object */}
-          <div className="absolute inset-0 bg-brand-yellow/40 blur-[90px] rounded-full -z-10"></div>
+          <div className="absolute inset-0 bg-brand-yellow/20 blur-[100px] rounded-full -z-10 scale-75"></div>
         </motion.div>
       </motion.div>
 
