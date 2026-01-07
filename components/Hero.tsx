@@ -1,106 +1,18 @@
-import React, { useRef } from 'react';
-import { motion, useTransform, useSpring, useMotionValue } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
-  const ref = useRef(null);
-
-  // Mouse Parallax Logic
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    const { clientX, clientY } = e;
-    const { innerWidth, innerHeight } = window;
-    // Calculate position relative to center (-1 to 1)
-    const x = (clientX / innerWidth) - 0.5;
-    const y = (clientY / innerHeight) - 0.5;
-
-    mouseX.set(x);
-    mouseY.set(y);
-  };
-
-  // Configuration for smooth spring animation
-  const springConfig = { damping: 25, stiffness: 150 };
-
-  // Calculate transforms
-  const xRange = useTransform(mouseX, [-0.5, 0.5], [-25, 25]);
-  const yRange = useTransform(mouseY, [-0.5, 0.5], [-25, 25]);
-  const xInverseRange = useTransform(mouseX, [-0.5, 0.5], [15, -15]);
-  const yInverseRange = useTransform(mouseY, [-0.5, 0.5], [15, -15]);
-
-  // Apply springs to transforms
-  const moveX = useSpring(xRange, springConfig);
-  const moveY = useSpring(yRange, springConfig);
-  const moveXInverse = useSpring(xInverseRange, springConfig);
-  const moveYInverse = useSpring(yInverseRange, springConfig);
-
-  // Rotation transforms (Defined at top level)
-  // Input: Mouse position [-0.5, 0.5] -> Output: Degrees [-5, 5]
-  const rotateX = useTransform(mouseY, [-0.5, 0.5], [5, -5]);
-  const rotateY = useTransform(mouseX, [-0.5, 0.5], [-5, 5]);
-
   return (
-    <section
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-white py-20 [perspective:2000px]"
-    >
-      {/* Background Particles/Noise - Parallax Layer (Back) */}
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-white py-20">
+
+      {/* Background Particles/Noise - Static Layer */}
       <div className="absolute inset-0 opacity-30 pointer-events-none select-none z-0">
-        <motion.div
-          style={{ x: moveXInverse, y: moveYInverse }}
-          className="absolute top-[10%] left-[10%] w-[30rem] h-[30rem] bg-brand-yellow/5 rounded-full blur-[100px]"
-        />
-        <motion.div
-          style={{ x: moveX, y: moveY }}
-          className="absolute bottom-[10%] right-[10%] w-[40rem] h-[40rem] bg-brand-yellow/5 rounded-full blur-[120px]"
-        />
+        <div className="absolute top-[10%] left-[10%] w-[30rem] h-[30rem] bg-brand-yellow/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-[10%] right-[10%] w-[40rem] h-[40rem] bg-brand-yellow/5 rounded-full blur-[120px]" />
       </div>
 
-      {/* Main 3D Object Wrapper - Separating Entry Animation from Parallax */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8, y: 50 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-        className="relative z-10 mb-12 select-none"
-      >
-        {/* Inner Parallax Container - Handles Mouse Interaction */}
-        {/* Inner Parallax Container - Handles Mouse Interaction */}
-        <motion.div
-          style={{
-            x: moveX,
-            y: moveY,
-            rotateX: rotateX,
-            rotateY: rotateY,
-            transformStyle: "preserve-3d" // Essential for 3D feel
-          }}
-          className="w-64 h-64 sm:w-80 sm:h-80 md:w-[480px] md:h-[480px]"
-        >
-          {/* Image - Handles Infinite Floating/Breathing Animation */}
-          <motion.img
-            animate={{
-              translateY: [0, -20, 0],
-              rotate: [0, 2, 0]
-            }}
-            transition={{
-              repeat: Infinity,
-              duration: 8,
-              ease: "easeInOut"
-            }}
-            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
-            alt="Abstract Liquid"
-            className="w-full h-full object-cover rounded-full filter grayscale sepia brightness-110 saturate-[3.5] hue-rotate-[-5deg] contrast-125 drop-shadow-2xl"
-            style={{
-              maskImage: 'radial-gradient(circle at center, black 40%, transparent 70%)',
-              WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 70%)',
-            }}
-          />
-          {/* Glow Effect attached to the object */}
-          <div className="absolute inset-0 bg-brand-yellow/40 blur-[90px] rounded-full -z-10"></div>
+      {/* Main Object Wrapper - Removed */}
 
-
-        </motion.div>
-      </motion.div>
 
       {/* Text Content */}
       <div className="relative z-20 text-center px-4 max-w-7xl mx-auto flex flex-col items-center">
