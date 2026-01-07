@@ -6,9 +6,11 @@ import AppShowcase from './components/AppShowcase';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import DownloadBanner from './components/DownloadBanner';
+import MobileDownloadBanner from './components/MobileDownloadBanner';
 
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isBannerVisible, setIsBannerVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,7 +22,8 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-black text-white selection:bg-brand-yellow selection:text-black overflow-x-hidden">
-      <Navbar scrolled={scrolled} />
+      <MobileDownloadBanner isVisible={isBannerVisible} onClose={() => setIsBannerVisible(false)} />
+      <Navbar scrolled={scrolled} isBannerVisible={isBannerVisible} />
 
       <main>
         <Hero />
