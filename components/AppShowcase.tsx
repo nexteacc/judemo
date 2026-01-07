@@ -24,8 +24,8 @@ const AppShowcase: React.FC = () => {
         MOBILE VIEW: Horizontal Auto-Scrolling 
         ========================================
       */}
+      {/* 
       <div className="lg:hidden relative w-full">
-        {/* Gradient Masks for fade effect at edges */}
         <div className="absolute left-0 top-0 bottom-0 w-12 z-20 bg-gradient-to-r from-black to-transparent pointer-events-none"></div>
         <div className="absolute right-0 top-0 bottom-0 w-12 z-20 bg-gradient-to-l from-black to-transparent pointer-events-none"></div>
 
@@ -38,18 +38,17 @@ const AppShowcase: React.FC = () => {
             duration: 25 // Slow speed for showcase
           }}
         >
-          {/* Duplicate items to create infinite loop effect */}
           <div className="transform scale-90 sm:scale-100 flex gap-10">
             <MarketplacePhone />
             <CommunityPhone />
           </div>
-          {/* Clone Set */}
           <div className="transform scale-90 sm:scale-100 flex gap-10">
             <MarketplacePhone />
             <CommunityPhone />
           </div>
         </motion.div>
       </div>
+      */}
 
 
       {/* 

@@ -24,7 +24,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled, isBannerVisible }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 sm:w-12 sm:h-12 overflow-hidden flex items-center justify-center">
+          <div className="w-14 h-14 sm:w-20 sm:h-20 overflow-hidden flex items-center justify-center">
             <img src="/logo.jpg" alt="泽麟 Logo" className="w-full h-full object-contain" />
           </div>
           <span className="text-xl font-serif font-bold tracking-tight hidden sm:block text-white">ZELIN</span>
