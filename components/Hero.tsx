@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { MarketplacePhone } from './PhoneMockup';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative w-full min-h-[60vh] md:min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black py-12 md:py-20">
+    <section className="relative w-full min-h-[60vh] md:min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black pt-36 pb-12 md:py-20">
 
       {/* Background Particles/Noise - Static Layer */}
       <div className="absolute inset-0 opacity-30 pointer-events-none select-none z-0">
@@ -13,7 +14,6 @@ const Hero: React.FC = () => {
 
       {/* Text Content */}
       <div className="relative z-20 text-center px-4 max-w-7xl mx-auto flex flex-col items-center">
-
         {/* Title Reveal */}
         <div className="overflow-hidden">
           <motion.h1
@@ -59,6 +59,12 @@ const Hero: React.FC = () => {
           <div className="absolute inset-0 bg-brand-yellow transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 -z-0"></div>
         </motion.button>
       </div>
+
+      {/* Phone Background for Mobile - Pushed below text */}
+      <div className="relative mt-16 md:hidden z-10 w-full flex justify-center opacity-100">
+        <MarketplacePhone />
+      </div>
+
     </section>
   );
 };

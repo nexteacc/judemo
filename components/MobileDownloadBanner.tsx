@@ -16,7 +16,7 @@ const MobileDownloadBanner: React.FC<MobileDownloadBannerProps> = ({ isVisible, 
             {/* Left: Logo + Text */}
             <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl overflow-hidden flex-shrink-0 border border-white/20 shadow-sm">
-                    <img src="/1024x1024logo.png" alt="泽麟 Logo" className="w-full h-full object-contain" />
+                    <img src="/logo.jpg" alt="泽麟 Logo" className="w-full h-full object-contain" />
                 </div>
                 <div>
                     <h3 className="text-sm font-bold text-white leading-tight">泽麟 App</h3>

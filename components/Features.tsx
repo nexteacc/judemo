@@ -43,7 +43,7 @@ const Features: React.FC = () => {
         viewport={{ once: true, margin: "-50px" }}
         className="grid grid-cols-1 md:grid-cols-2 gap-8"
       >
-        {/* Card 1 - JuPay */}
+        {/* Card 1 - 泽麟 */}
         <motion.div
           variants={itemVariants}
           whileHover={{ y: -5, boxShadow: "0 20px 40px -5px rgba(0, 0, 0, 0.1)" }}
@@ -61,7 +61,7 @@ const Features: React.FC = () => {
                 <span className="text-sm font-bold text-gray-400 tracking-wider">钱包服务</span>
               </div>
               <span className="px-3 py-1 bg-brand-yellow/10 border border-brand-yellow/20 rounded-full text-xs font-bold text-brand-yellow-dark">
-                Ju支持
+                泽麟支持
               </span>
             </div>
 
@@ -69,7 +69,7 @@ const Features: React.FC = () => {
               <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center shadow-sm border border-white/10 group-hover:scale-105 transition-transform duration-300">
                 <div className="w-6 h-6 bg-brand-yellow rounded-md"></div>
               </div>
-              <h3 className="text-3xl font-medium text-white">JuPay</h3>
+              <h3 className="text-3xl font-medium text-white">泽麟</h3>
             </div>
 
             <p className="text-gray-400 font-normal text-lg">一键支付，连接全球的加密生活</p>
@@ -189,7 +189,7 @@ const Features: React.FC = () => {
 
             <div className="relative z-10">
               <h3 className="text-xl md:text-2xl font-medium mb-3 text-white">安全交易 合规保障</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">依托 JuPay 与汇付天下，<br />打造可信的交易环境。</p>
+              <p className="text-gray-400 text-sm leading-relaxed">依托 泽麟 与汇付天下，<br />打造可信的交易环境。</p>
             </div>
             <div className="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300">
               <ShieldCheck size={32} className="text-gray-400 group-hover:text-white transition-colors" strokeWidth={1.5} />

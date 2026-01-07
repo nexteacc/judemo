@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           <div className="col-span-2 md:col-span-5">
             <div className="flex items-center gap-3 mb-4 md:mb-6">
               <div className="w-8 h-8 md:w-12 md:h-12 overflow-hidden flex items-center justify-center">
-                <img src="/1024x1024logo.png" alt="泽麟 Logo" className="w-full h-full object-contain" />
+                <img src="/logo.jpg" alt="泽麟 Logo" className="w-full h-full object-contain" />
               </div>
               <span className="text-xl md:text-2xl font-serif font-bold tracking-tight text-white">ZELIN</span>
             </div>
