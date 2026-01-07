@@ -3,7 +3,7 @@ import { motion, useTransform, useSpring, useMotionValue } from 'framer-motion';
 
 const Hero: React.FC = () => {
   const ref = useRef(null);
-  
+
   // Mouse Parallax Logic
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
     // Calculate position relative to center (-1 to 1)
     const x = (clientX / innerWidth) - 0.5;
     const y = (clientY / innerHeight) - 0.5;
-    
+
     mouseX.set(x);
     mouseY.set(y);
   };
@@ -40,106 +40,106 @@ const Hero: React.FC = () => {
   const rotateY = useTransform(mouseX, [-0.5, 0.5], [-5, 5]);
 
   return (
-    <section 
-        ref={ref}
-        onMouseMove={handleMouseMove}
-        className="relative w-full h-screen min-h-[800px] flex flex-col items-center justify-center overflow-hidden bg-white pt-20 [perspective:2000px]"
+    <section
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-white py-20 [perspective:2000px]"
     >
       {/* Background Particles/Noise - Parallax Layer (Back) */}
       <div className="absolute inset-0 opacity-30 pointer-events-none select-none z-0">
-         <motion.div 
-            style={{ x: moveXInverse, y: moveYInverse }}
-            className="absolute top-[10%] left-[10%] w-[30rem] h-[30rem] bg-gray-50 rounded-full blur-[100px]"
-         />
-         <motion.div 
-            style={{ x: moveX, y: moveY }}
-            className="absolute bottom-[10%] right-[10%] w-[40rem] h-[40rem] bg-gray-50 rounded-full blur-[120px]"
-         />
+        <motion.div
+          style={{ x: moveXInverse, y: moveYInverse }}
+          className="absolute top-[10%] left-[10%] w-[30rem] h-[30rem] bg-brand-yellow/5 rounded-full blur-[100px]"
+        />
+        <motion.div
+          style={{ x: moveX, y: moveY }}
+          className="absolute bottom-[10%] right-[10%] w-[40rem] h-[40rem] bg-brand-yellow/5 rounded-full blur-[120px]"
+        />
       </div>
 
       {/* Main 3D Object Wrapper - Separating Entry Animation from Parallax */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 0.8, y: 50 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
         className="relative z-10 mb-12 select-none"
       >
-          {/* Inner Parallax Container - Handles Mouse Interaction */}
-          <motion.div
-             style={{ 
-                x: moveX, 
-                y: moveY, 
-                rotateX: rotateX, 
-                rotateY: rotateY,
-                transformStyle: "preserve-3d" // Essential for 3D feel
+        {/* Inner Parallax Container - Handles Mouse Interaction */}
+        <motion.div
+          style={{
+            x: moveX,
+            y: moveY,
+            rotateX: rotateX,
+            rotateY: rotateY,
+            transformStyle: "preserve-3d" // Essential for 3D feel
+          }}
+          className="w-64 h-64 sm:w-80 sm:h-80 md:w-[480px] md:h-[480px]"
+        >
+          {/* Image - Handles Infinite Floating/Breathing Animation */}
+          <motion.img
+            animate={{
+              translateY: [0, -20, 0],
+              rotate: [0, 2, 0]
             }}
-            className="w-64 h-64 sm:w-80 sm:h-80 md:w-[480px] md:h-[480px]"
-          >
-             {/* Image - Handles Infinite Floating/Breathing Animation */}
-             <motion.img 
-                animate={{ 
-                    translateY: [0, -20, 0],
-                    rotate: [0, 2, 0] 
-                }}
-                transition={{ 
-                    repeat: Infinity, 
-                    duration: 8, 
-                    ease: "easeInOut" 
-                }}
-                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop" 
-                alt="Abstract Liquid" 
-                className="w-full h-full object-cover rounded-full filter contrast-125 saturate-0 brightness-105 drop-shadow-2xl"
-                style={{
-                    maskImage: 'radial-gradient(circle at center, black 40%, transparent 70%)',
-                    WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 70%)',
-                }}
-             />
-             {/* Glow Effect attached to the object */}
-             <div className="absolute inset-0 bg-gray-200/40 blur-[90px] rounded-full -z-10"></div>
-          </motion.div>
+            transition={{
+              repeat: Infinity,
+              duration: 8,
+              ease: "easeInOut"
+            }}
+            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
+            alt="Abstract Liquid"
+            className="w-full h-full object-cover rounded-full filter grayscale sepia brightness-110 saturate-[3.5] hue-rotate-[-5deg] contrast-125 drop-shadow-2xl"
+            style={{
+              maskImage: 'radial-gradient(circle at center, black 40%, transparent 70%)',
+              WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 70%)',
+            }}
+          />
+          {/* Glow Effect attached to the object */}
+          <div className="absolute inset-0 bg-brand-yellow/40 blur-[90px] rounded-full -z-10"></div>
+        </motion.div>
       </motion.div>
 
       {/* Text Content */}
       <div className="relative z-20 text-center px-4 max-w-7xl mx-auto flex flex-col items-center">
-        
+
         {/* Title Reveal */}
         <div className="overflow-hidden">
-            <motion.h1 
-                initial={{ y: 100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-                className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[0.15em] sm:tracking-[0.25em] text-brand-black leading-tight whitespace-nowrap"
-            >
+          <motion.h1
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[0.15em] sm:tracking-[0.25em] text-brand-black leading-tight whitespace-nowrap"
+          >
             因共识而聚 · 为价值而藏
-            </motion.h1>
+          </motion.h1>
         </div>
-        
+
         {/* Accent Line Scale */}
-        <motion.div 
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="w-16 h-[3px] bg-brand-yellow mt-8 mb-8 rounded-full origin-center"
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="w-16 h-[3px] bg-brand-yellow mt-8 mb-8 rounded-full origin-center"
         ></motion.div>
 
         {/* Subtitle Fade */}
-        <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-xs sm:text-sm md:text-base font-bold font-mono text-gray-600 tracking-[0.3em] uppercase mb-16"
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-xs sm:text-sm md:text-base font-bold font-mono text-gray-600 tracking-[0.3em] uppercase mb-16"
         >
           Zelin · The Digital Asset Ecosystem
         </motion.p>
 
         {/* Button */}
-        <motion.button 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="group relative px-10 py-4 rounded-full border border-brand-black hover:border-brand-yellow transition-colors duration-300 overflow-hidden bg-white/50 backdrop-blur-sm"
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="group relative px-10 py-4 rounded-full border border-brand-black hover:border-brand-yellow transition-colors duration-300 overflow-hidden bg-white/50 backdrop-blur-sm"
         >
           <span className="relative z-10 text-sm md:text-base tracking-[0.2em] font-extrabold text-brand-black group-hover:text-black transition-colors pl-1">
             进入泽麟
